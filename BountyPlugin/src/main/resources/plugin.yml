@@ -1,0 +1,29 @@
+name: BountyPlugin
+version: '1.0.0'
+main: dev.bountyplugin.BountyPlugin
+api-version: '1.20'
+author: BountyPlugin Team
+description: Ein produktionsreifes Bounty-System mit Vault/EternalEconomy-Unterstuetzung.
+softdepend: [Vault, EternalEconomy]
+load: POSTWORLD
+
+commands:
+  bounty:
+    description: Verwalte Bountys.
+    usage: /<command> add <Spieler> <Betrag>
+    permission: bountyplugin.command.bounty
+  bountyad:
+    description: Administrative Befehle fuer BountyPlugin.
+    usage: /<command> reload
+    permission: bountyplugin.admin
+
+permissions:
+  bountyplugin.command.bounty:
+    description: Erlaubt das Setzen von Bountys.
+    default: true
+  bountyplugin.admin:
+    description: Erlaubt Admin-Befehle (z.B. reload).
+    default: op
+  bountyplugin.bypass.selftarget:
+    description: Erlaubt das Setzen eines Bountys auf sich selbst.
+    default: op

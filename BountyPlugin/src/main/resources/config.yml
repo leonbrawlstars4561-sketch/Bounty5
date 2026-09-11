@@ -1,0 +1,37 @@
+settings:
+  # Kleinster erlaubter Bounty-Betrag.
+  min-bounty: 1
+  # Groesster erlaubter Bounty-Betrag. Leer lassen ("") fuer kein Limit.
+  # Unterstuetzt dieselbe Schreibweise wie /bounty add (z.B. 1q, 500m).
+  max-bounty: "1q"
+  currency-symbol: "$"
+  broadcast-on-set: true
+  broadcast-on-kill: true
+  # Wenn true, muss das Ziel online sein oder bereits einmal auf dem
+  # Server gespielt haben, damit ein Bounty gesetzt werden kann.
+  require-target-has-played: true
+
+gui:
+  title: "&8Bounty bestätigen"
+  size: 27
+  confirm-slot: 11
+  cancel-slot: 15
+  info-slot: 13
+
+messages:
+  prefix: "&8[&6Bounty&8] &r"
+  no-permission: "&cDu hast keine Berechtigung dafür."
+  player-not-found: "&cDieser Spieler wurde nicht gefunden oder war noch nie auf dem Server."
+  cannot-target-self: "&cDu kannst kein Bounty auf dich selbst setzen."
+  invalid-amount: "&cUngültiger Betrag: &f{input}&c. Beispiele: 1000, 1.5k, 2b, 10t, 1q"
+  amount-too-low: "&cDer Betrag muss mindestens &f{min}&c betragen."
+  amount-too-high: "&cDer Betrag darf höchstens &f{max}&c betragen."
+  insufficient-funds: "&cDu hast nicht genug Geld für diesen Bounty."
+  no-economy: "&cEs ist derzeit kein Economy-Plugin verfügbar. Bitte kontaktiere einen Administrator."
+  confirmation-opened: "&eBestätige das Setzen eines Bountys von &f{amount}&e auf &f{target}&e."
+  confirmed: "&aDu hast erfolgreich einen Bounty von &f{amount}&a auf &f{target}&a gesetzt. Gesamtbetrag: &f{total}"
+  cancelled: "&7Du hast das Setzen des Bountys abgebrochen."
+  bounty-increased: "&aDer Bounty auf &f{target}&a wurde erhöht. Neuer Gesamtbetrag: &f{total}"
+  bounty-paid-out: "&6&l{killer} &6hat den Bounty auf &f&l{victim} &6eingelöst und &f&l{amount} &6erhalten!"
+  reload-success: "&aKonfiguration und Economy wurden neu geladen."
+  usage-bounty-add: "&cVerwendung: /bounty add <Spieler> <Betrag>"
